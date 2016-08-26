@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	<package name="home-action" namespace="/" extends="base-default">
+		<action name="home_*" class="cn.blinkit.core.front.index.action.IndexAction" method="{1}">
+			<result name="index">/WEB-INF/jsp/index.jsp</result>
+			<result name="about">/WEB-INF/jsp/front/about.jsp</result>
+			<result name="comments">/WEB-INF/jsp/front/comments.jsp</result>
+			<result name="markdownUI">/WEB-INF/jsp/front/markdownUI.jsp</result>
+			<result name="loginUI">/WEB-INF/jsp/front/loginUI.jsp</result>
+			<result name="registerUI">/WEB-INF/jsp/front/registerUI.jsp</result>
+			<result name="loginToIndex" type="redirectAction">
+				<param name="actionName">home_index</param>
+			</result>
+		</action>
+	</package>
+</struts>

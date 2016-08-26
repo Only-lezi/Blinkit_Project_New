@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="cn.blinkit.core.backstage.friendLink.entity.FriendlyLink" table="friendlyLink">
+		<id name="linkId">
+			<column name="linkId" length="3"/>
+			<generator class="native"/>
+		</id>
+		<property name="linkName" type="java.lang.String">
+			<column name="linkName" length="20" not-null="true" />
+		</property>
+		<property name="linkURL" type="java.lang.String">
+			<column name="linkURL" length="50" not-null="true" />
+		</property>
+		<property name="linkTitle" type="java.lang.String">
+			<column name="linkTitle" length="50" />
+		</property>
+	</class>
+</hibernate-mapping>
+	

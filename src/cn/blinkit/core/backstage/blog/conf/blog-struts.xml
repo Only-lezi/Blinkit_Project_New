@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	<package name="blog-action" namespace="/admin/blog" extends="base-default">
+		<action name="blog_*" class="cn.blinkit.core.backstage.blog.action.BlogAction" method="{1}">
+			<result name="{1}">/WEB-INF/jsp/backstage/blog/{1}.jsp</result>
+			<result name="list" type="redirectAction">
+				<param name="actionName">blog_listUI</param>
+				<param name="blog.blogName">${strName}</param>
+				<param name="encode">true</param>
+			</result>
+			
+		</action>
+	</package>
+
+</struts>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="cn.blinkit.core.backstage.blog.entity.Blog" table="blog">
+		<id name="blogId" type="java.lang.String">
+			<column name="userId" length="32" />
+			<generator class="uuid.hex" />
+		</id>
+		<property name="blogName" type="java.lang.String">
+			<column name="blogName" length="100" not-null="true" />
+		</property>
+		<property name="blogAuthor" type="java.lang.String">
+			<column name="blogAuthor" length="50" not-null="true" />
+		</property>
+		<property name="blogExplain" type="java.lang.String">
+			<column name="blogExplain" length="300" not-null="true" />
+		</property>
+		<property name="blogImg" type="java.lang.String">
+			<column name="blogImg" length="100" />
+		</property>
+		<property name="blogType" type="java.lang.String">
+			<column name="blogType" length="1" />
+		</property>
+		<property name="blogLabel" type="java.lang.String">
+			<column name="blogLabel" length="50" />
+		</property>
+		<property name="blogDate" type="java.util.Date">
+			<column name="blogDate" length="20" />
+		</property>
+		<property name="blogState" type="java.lang.String">
+			<column name="blogState" length="1" />
+		</property>
+		<property name="blogContent" type="java.lang.String">
+			<column name="blogContent" length="20000" />
+		</property>
+	</class>
+</hibernate-mapping>
+	

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="cn.blinkit.core.backstage.user.entity.UserControl" table="user">
+		<id name="userId" type="java.lang.String">
+			<column name="userId" length="32" />
+			<generator class="uuid.hex" />
+		</id>
+		<property name="account" type="java.lang.String">
+			<column name="account" length="50" not-null="true" />
+		</property>
+		<property name="nickName" type="java.lang.String">
+			<column name="nickName" length="20" not-null="true" />
+		</property>
+		<property name="passWord" type="java.lang.String">
+			<column name="passWord" length="50" not-null="true" />
+		</property>
+		<property name="userEmail" type="java.lang.String">
+			<column name="userEmail" length="50" />
+		</property>
+		<property name="userPhone" type="java.lang.String">
+			<column name="userPhone" length="20" />
+		</property>
+		<property name="birthday" type="java.util.Date">
+			<column name="birthday" length="10" />
+		</property>
+		<property name="userDesc" type="java.lang.String">
+			<column name="userDesc" length="200" />
+		</property>
+		<property name="headImg" type="java.lang.String">
+			<column name="headImg" length="100" />
+		</property>
+		<property name="state" type="java.lang.String">
+			<column name="state" length="1" />
+		</property>
+	</class>
+</hibernate-mapping>
+	

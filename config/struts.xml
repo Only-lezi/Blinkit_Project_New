@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	<!-- 禁用动态方法访问 -->
+	<constant name="struts.enable.DynamicMethodInvocation" value="false" />
+	
+	<!-- 配置拓展名为action -->
+	<constant name="struts.action.extention" value="action,," />
+	<!-- 配置成开发模式 -->
+	<constant name="struts.devMode" value="true" />
+	<!-- 重新加载资源文件 -->
+	<constant name="struts.i18n.reload" value="true" />
+	<!-- 自动重新加载xml -->
+	<constant name="struts.configuration.xml.reload" value="true" />
+	<!-- 指定默认编码集,作用于HttpServletRequest的setCharacterEncoding方法 和freemarker 、velocity的输出 -->
+	<constant name="struts.i18n.encoding" value="UTF-8"/>
+	
+	
+	<!-- 把主题配置成simple -->
+	<constant name="struts.ui.theme" value="simple" />
+	
+	<!-- 配置全局结果及异常映射 -->
+	<package name="base-default" extends="struts-default">
+		<!-- 返回结果类型 -->
+		<result-types>
+			<result-type name="error" class="cn.blinkit.base.action.SysResultAction"></result-type>
+		</result-types>
+		<!-- 全局返回结果 -->
+		<global-results>
+			<result name="error" type="error">/WEB-INF/jsp/error.jsp</result>
+			<result name="sysError">/WEB-INF/jsp/error.jsp</result>
+			<result name="input">/WEB-INF/jsp/error.jsp</result>
+		</global-results>
+		<!-- 全局异常映射 -->
+		<global-exception-mappings>
+			<exception-mapping result="sysError" exception="cn.blinkit.base.exception.SysException"></exception-mapping>
+			<exception-mapping result="input" exception="java.lang.Exception"></exception-mapping>
+		</global-exception-mappings>
+	</package>
+	
+	<!-- 前台 -->
+	<!-- 包含首页的struts配置文件 -->
+	<include file="cn/blinkit/core/front/index/conf/index-struts.xml"></include>
+	<!-- 包含留言板的struts配置文件 -->
+	<include file="cn/blinkit/core/front/comments/conf/comments-struts.xml"></include>
+	<!-- 包含用户Blog的struts配置文件 -->
+	<include file="cn/blinkit/core/front/blog/conf/frontBlog-struts.xml"></include>
+	
+	
+	<!-- 后台 -->
+	<!-- 包含后台显示的struts配置文件 -->
+	<include file="cn/blinkit/core/backstage/admin/conf/admin-struts.xml"></include>
+	<!-- 包含管理员的struts配置文件 -->
+	<include file="cn/blinkit/core/backstage/home/conf/home-struts.xml"></include>
+	<!-- 包含用户管理的struts配置文件 -->
+	<include file="cn/blinkit/core/backstage/user/conf/userControl-struts.xml"></include>
+	<!-- 包含blog管理的struts配置文件 -->
+	<include file="cn/blinkit/core/backstage/blog/conf/blog-struts.xml"></include>
+	<!-- 包含留言管理的struts配置文件 -->
+	<include file="cn/blinkit/core/backstage/comControl/conf/comControl-struts.xml"></include>
+	
+</struts>

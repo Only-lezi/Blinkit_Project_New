@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="cn.blinkit.core.front.comments.entity.Comments" table="comments">
+		<id name="commentsId">
+			<column name="commentsId" length="10" />
+			<generator class="native" />
+		</id>
+		<property name="nickName" type="java.lang.String">
+			<column name="nickName" length="20" not-null="true" />
+		</property>
+		<property name="commentsTime" type="java.util.Date">
+			<column name="commentsTime" />
+		</property>
+		<property name="userEmail" type="java.lang.String">
+			<column name="userEmail" length="50" not-null="true" />
+		</property>
+		<property name="personalPage" type="java.lang.String">
+			<column name="personalPage" length="50" />
+		</property>		
+		<property name="leaveMessages" type="java.lang.String">
+			<column name="leaveMessages" length="1000" not-null="true" />
+		</property>
+	</class>
+</hibernate-mapping>
+	

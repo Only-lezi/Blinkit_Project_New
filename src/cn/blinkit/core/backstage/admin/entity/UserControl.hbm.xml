@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="cn.blinkit.core.backstage.admin.entity.Admin" table="admin">
+		<id name="adminId" type="java.lang.String">
+			<column name="userId" length="32" />
+			<generator class="uuid.hex" />
+		</id>
+		<property name="administrator" type="java.lang.String">
+			<column name="administrator" length="20" not-null="true" />
+		</property>
+		<property name="adminPwd" type="java.lang.String">
+			<column name="adminPwd" length="20" not-null="true" />
+		</property>
+		<property name="adminName" type="java.lang.String">
+			<column name="adminName" length="20" not-null="true" />
+		</property>
+	</class>
+</hibernate-mapping>
+	

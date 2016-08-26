@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	<package name="backstage-action" namespace="/admin" extends="base-default">
+		<action name="*" class="cn.blinkit.core.backstage.home.action.HomeAction" method="{1}">
+			<result name="{1}">/WEB-INF/jsp/backstage/{1}.jsp</result>
+			<result name="loginUI">/WEB-INF/jsp/backstage/loginUI.jsp</result>
+			<result name="loginToHome" type="redirectAction">
+				<param name="actionName">mainUI</param>
+			</result>
+		</action>
+	</package>
+</struts>

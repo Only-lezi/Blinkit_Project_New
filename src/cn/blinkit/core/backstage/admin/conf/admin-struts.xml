@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	<package name="admin-action" namespace="/admin/admin" extends="base-default">
+		<action name="admin_*" class="cn.blinkit.core.backstage.admin.action.AdminAction" method="{1}">
+			<result name="{1}">/WEB-INF/jsp/backstage/admin/{1}.jsp</result>
+			<result name="list" type="redirectAction">
+				<param name="actionName">admin_listUI</param>
+				<!-- <param name="admin.administrator">${strName}</param> -->
+				<param name="encode">true</param>
+			</result>
+		</action>
+	</package>
+</struts>

@@ -1,0 +1,3 @@
+eclipse.preferences.version=1
+validator.Checked=WebRoot/umeditor/umeditor.min.js,WebRoot/WEB-INF/jsp/front/register.jsp,WebRoot/assets/js/codemirror.min.js,WebRoot/sitemap.xml,WebRoot/editor_md,WebRoot/ueditor
+validator.Unchecked=
