@@ -1,14 +1,13 @@
 package cn.blinkit.core.backstage.friendlyLink.entity;
 
 import java.io.Serializable;
-import java.util.Date;
 
 public class FriendlyLink implements Serializable {
 	
 	private int linkId;	// 友情链接id
-	private String linkName;  // 连接名称
-	private String linkURL;   // 链接
-	private String linkTitle;  // 链接介绍
+	private String linkName;  // 网站名称
+	private String linkURL;   // 网站链接
+	private String linkTitle;  // 网站介绍
 	
 	public FriendlyLink() {
 	}

@@ -5,20 +5,25 @@ import java.util.List;
 import javax.annotation.Resource;
 
 import cn.blinkit.base.action.BaseAction;
-import cn.blinkit.core.backstage.user.entity.UserControl;
-import cn.blinkit.core.backstage.user.service.UserControlService;
+import cn.blinkit.core.backstage.friendlyLink.entity.FriendlyLink;
+import cn.blinkit.core.backstage.friendlyLink.service.FriendlyLinkService;
 
 public class friendlyLinkAction extends BaseAction {
 	
 	@Resource
-	private UserControlService userControlService;
-	private List<UserControl> userContorlList;
-	private UserControl userControl;
+	private FriendlyLinkService friendlyLinkService;
+	private List<FriendlyLink> friendlyLinkList;
+	private FriendlyLink friendlyLink;
 	private String[] selectedRow;
+	
+	public List<FriendlyLink> showList() {
+		friendlyLinkList = friendlyLinkService.findObjects();
+		return friendlyLinkList;
+	}
 
 	//列表页面
 	public String listUI() {
-		userContorlList = userControlService.findObjects();
+		friendlyLinkList = friendlyLinkService.findObjects();
 		return "listUI";
 	}
 	//跳转到新增用户页面
@@ -28,31 +33,31 @@ public class friendlyLinkAction extends BaseAction {
 	
 	//保存新增
 	public String add(){
-		if (userControl != null) {
-			userControlService.save(userControl);
+		if (friendlyLink != null) {
+			friendlyLinkService.save(friendlyLink);
 		}
 		return "list";
 	}
 	
 	// 跳转到编辑页面
 	public String editUI() {
-		if (userControl != null && userControl.getUserId() != null) {
-			userControl = userControlService.findObjectById(userControl.getUserId());
+		if (friendlyLink != null) {
+			friendlyLink = friendlyLinkService.findObjectById(friendlyLink.getLinkId());
 		}
 		return "editUI";
 	}
 	
 	// 保存编辑
 	public String edit() {
-		if (userControl != null) {
-			userControlService.update(userControl);
+		if (friendlyLink != null) {
+			friendlyLinkService.update(friendlyLink);
 		}
 		return "list";
 	}
 	// 删除
 	public String delete() {
-		if (userControl != null && userControl.getUserId() != null) {
-			userControlService.delete(userControl.getUserId());
+		if (friendlyLink != null) {
+			friendlyLinkService.delete(friendlyLink.getLinkId());
 		}
 		return "list";
 	}
@@ -60,28 +65,29 @@ public class friendlyLinkAction extends BaseAction {
 	public String deleteSelected() {
 		if (selectedRow != null) {
 			for (String id : selectedRow) {
-				userControlService.delete(id);
+				friendlyLinkService.delete(id);
 			}
 		}
 		return "list";
 	}
-	public List<UserControl> getUserContorlList() {
-		return userContorlList;
+	public FriendlyLinkService getFriendlyLinkService() {
+		return friendlyLinkService;
 	}
-	public void setUserContorlList(List<UserControl> userContorlList) {
-		this.userContorlList = userContorlList;
+	public void setFriendlyLinkService(FriendlyLinkService friendlyLinkService) {
+		this.friendlyLinkService = friendlyLinkService;
 	}
-	public UserControl getUserControl() {
-		return userControl;
+	public List<FriendlyLink> getFriendlyLinkList() {
+		return friendlyLinkList;
 	}
-	public void setUserControl(UserControl userControl) {
-		this.userControl = userControl;
+	public void setFriendlyLinkList(List<FriendlyLink> friendlyLinkList) {
+		this.friendlyLinkList = friendlyLinkList;
 	}
-	public String[] getSelectedRow() {
-		return selectedRow;
+	public FriendlyLink getFriendlyLink() {
+		return friendlyLink;
 	}
-	public void setSelectedRow(String[] selectedRow) {
-		this.selectedRow = selectedRow;
+	public void setFriendlyLink(FriendlyLink friendlyLink) {
+		this.friendlyLink = friendlyLink;
 	}
 
+	
 }

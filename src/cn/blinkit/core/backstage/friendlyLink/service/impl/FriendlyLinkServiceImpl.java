@@ -11,7 +11,6 @@ import cn.blinkit.base.service.impl.BaseServiceImpl;
 import cn.blinkit.core.backstage.friendlyLink.dao.FriendlyLinkDao;
 import cn.blinkit.core.backstage.friendlyLink.entity.FriendlyLink;
 import cn.blinkit.core.backstage.friendlyLink.service.FriendlyLinkService;
-import cn.blinkit.core.backstage.user.entity.UserControl;
 
 @Service("friendlyLinkService")
 public class FriendlyLinkServiceImpl extends BaseServiceImpl<FriendlyLink> implements FriendlyLinkService {

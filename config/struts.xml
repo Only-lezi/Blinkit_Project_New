@@ -61,5 +61,6 @@
 	<include file="cn/blinkit/core/backstage/blog/conf/blog-struts.xml"></include>
 	<!-- 包含留言管理的struts配置文件 -->
 	<include file="cn/blinkit/core/backstage/comControl/conf/comControl-struts.xml"></include>
-	
+	<!-- 包含留言管理的struts配置文件 -->
+	<include file="cn/blinkit/core/backstage/friendlyLink/conf/friendlyLink-struts.xml"></include>
 </struts>
