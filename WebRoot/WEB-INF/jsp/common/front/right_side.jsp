@@ -94,25 +94,16 @@
 		</div>
 	</div>
 </div>
-
-<c:if test="${not isPhone}">
-	<!-- 友情链接 -->
-	<div class="side-box">
-		<div class="my-side-title">
-			<span class="am-icon-link"> 友情链接</span>
-		</div>
-		<div id="right-side-friendLink">
-			<ul>
-				<%-- <c:forEach items="${systemListLink }" var="ls">
-					<li><a href="${ls.url }" target="_blank">${ls.title}</a></li>
-				</c:forEach> --%>
-				<li><a href="http://www.liuyunfei.cn/" target="_blank" title="柳云飞的个人博客，主要是分享java和HTML相关的知识" rel="nofollow">LovePanda</a></li>
-				<li><a href="http://blog.csdn.net/" target="_blank" title="CSDN深度IT技术博客。" rel="nofollow">CSDN博客</a></li>
-				<li><a href="http://www.51cto.com/" target="_blank" title="51CTO.COM - 技术成就梦想 - 中国领先的IT技术网站。" rel="nofollow">51CTO</a></li>
-				<li><a href="http://www.ithome.com/" target="_blank" title="IT之家，青岛软媒旗下，国内顶级IT科技门户网站。" rel="nofollow">IT之家</a></li>
-				<li><a href="http://www.corer.me/" target="_blank" title="聚集之美欢迎你，在这里可以让你们发现美的程序员,我们这边聚集了java c# c++ b++等程序员。" rel="nofollow">聚集之美</a></li>
-	     		<li><a href="http://www.jianshu.com/users/ea4015fcb048/latest_articles" target="_blank" title="碰巧会写点程序的摇滚爱好者。" rel="nofollow">BlindingDark</a></li>
-			</ul>
-		</div>
+<!-- 友情链接 -->
+<div class="side-box">
+	<div class="my-side-title">
+		<span class="am-icon-link"> 友情链接</span>
 	</div>
-</c:if>
+	<div id="right-side-friendLink">
+		<ul>
+			<c:forEach items="${basePath }admin/link/showList.action" var="ls"><!-- ${systemListLink } -->
+				<li><a href="${ls.url }" target="_blank">${ls.title}</a></li>
+			</c:forEach>
+		</ul>
+	</div>
+</div>
