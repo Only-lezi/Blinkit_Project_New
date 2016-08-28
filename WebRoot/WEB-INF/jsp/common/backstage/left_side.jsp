@@ -53,7 +53,7 @@
 			</ul>
 		</li>
         
-        <li><a href="#"><span class="am-icon-table"></span> 表格</a></li>
+        <li><a href="${basePath }admin/link/listUI.action"><span class="am-icon-compass"></span> 友情链接  </a></li>
         <li><a href="admin-form.html"><span class="am-icon-pencil-square-o"></span> 表单</a></li>
         <li><a href="#"><span class="am-icon-sign-out"></span> 注销</a></li>
       </ul>

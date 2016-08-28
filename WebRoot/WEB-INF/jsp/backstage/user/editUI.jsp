@@ -17,7 +17,7 @@
 </head>
 <body>
 <!--[if lte IE 9]>
-<p class="browsehappy">你正在使用<strong>过时</strong>的浏览器，Amaze UI 暂不支持。 请 <a href="http://browsehappy.com/" target="_blank">升级浏览器</a>
+<p class="browsehappy">你正在使用<strong>过时</strong>的浏览器，布灵格   暂不支持。 请 <a href="http://browsehappy.com/" target="_blank">升级浏览器</a>
   以获得更好的体验！</p>
 <![endif]-->
 	
@@ -40,7 +40,6 @@
 			      	
 			<div class="am-panel">
 				<form class="am-form" action="${basePath }admin/user_edit.action" method="post" enctype="multipart/form-data">
-					
 					<s:hidden name="userControl.userId"></s:hidden>
 					
 					<div class="am-g am-margin-top">
@@ -112,8 +111,7 @@
 					<div class="am-g am-margin-top">
 					<div class="am-u-sm-4 am-u-md-2 am-text-right">自我介绍：</div>
 						<div class="am-u-sm-8 am-u-md-4">
-							<s:textarea name="userControl.userDesc"  rows="5"></s:textarea>
-							<!-- <textarea  style="resize:none; " rows="5" name="userControl.userDesc"></textarea> -->
+							<s:textarea name="userControl.userDesc" cssStyle="resize:none;" rows="5"></s:textarea>
 						</div>
 						<div class="am-u-sm-12 am-u-md-6">不填写则自动截取内容前255字符</div>
 					</div>
