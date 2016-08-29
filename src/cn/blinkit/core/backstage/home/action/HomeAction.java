@@ -9,6 +9,7 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.apache.struts2.ServletActionContext;
 
+import cn.blinkit.base.constant.Constant;
 import cn.blinkit.core.backstage.admin.entity.Admin;
 import cn.blinkit.core.backstage.admin.service.AdminService;
 
@@ -38,7 +39,7 @@ public class HomeAction extends ActionSupport {
 					//2.1、登录成功
 					Admin admin = list.get(0);
 					//2.1.2、将用户信息保存到session中
-					ServletActionContext.getRequest().getSession().setAttribute("currentAdmin", admin);
+					ServletActionContext.getRequest().getSession().setAttribute(Constant.ADMIN, admin);
 					//2.1.3、将用户登录记录到日志文件
 					Log log = LogFactory.getLog(getClass());
 					log.info("用户名称为：" + admin.getAdminName() + " 的用户登录了系统。");
@@ -59,6 +60,18 @@ public class HomeAction extends ActionSupport {
 	// 跳转到后台管理的首页
 	public String mainUI() {
 		return "mainUI";
+	}
+	
+	//退出，注销
+	public String logout(){
+		if (ServletActionContext.getRequest().getSession().getAttribute(Constant.ADMIN) != null) {
+			//清除session中保存的用户信息
+			ServletActionContext.getRequest().getSession().removeAttribute(Constant.ADMIN);
+			return loginUI();
+		} else {
+			return loginResult = "您未登陆或session超时";
+		}
+		
 	}
 
 	public Admin getAdmin() {
