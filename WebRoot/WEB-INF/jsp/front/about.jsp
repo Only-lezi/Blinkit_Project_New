@@ -31,6 +31,13 @@
 		<figure style="text-align: center;">
 			<img src="${basePath }images/Only-lezi.jpg" data-rel="${basePath }images/Only-lezi.jpg"  alt="布灵格  | blinkit.cn" width="380" height="380"/>
 			<figcaption class="am-figure-capition-btm">
+				你聪明有人会说你心机重，你靠的是努力有人会说你运气好，<br/>
+				你说自己天生乐观有人会说你虚假，有时候，你明明就是一杯白水，<br/>
+				却被人硬生生逼成了满肚子憋屈的碳酸饮料。人一生要遇见太多人，<br/>
+				即使有些话字字诛心，也没必要活在他们的眼神里，只要内心澄明，<br/>
+				就永远不用讨好一个不懂你的人。<br/>
+				爱生活，爱Java。   <br/>
+				<br/>
 			            再牛逼的<strong>梦想</strong>，也抵不住傻逼似的<strong>坚持！</strong>
 				<br/>     
 				<strong>  坚持！！！</strong>
