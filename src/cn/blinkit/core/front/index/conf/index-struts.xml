@@ -7,9 +7,10 @@
 	<package name="home-action" namespace="/" extends="base-default">
 		<action name="home_*" class="cn.blinkit.core.front.index.action.IndexAction" method="{1}">
 			<result name="index">/WEB-INF/jsp/index.jsp</result>
-			<result name="about">/WEB-INF/jsp/front/about.jsp</result>
 			<result name="comments">/WEB-INF/jsp/front/comments.jsp</result>
 			<result name="markdownUI">/WEB-INF/jsp/front/markdownUI.jsp</result>
+			<result name="about">/WEB-INF/jsp/front/about.jsp</result>
+			<result name="MyResume">/WEB-INF/jsp/front/MyResume.jsp</result>
 			<result name="loginUI">/WEB-INF/jsp/front/loginUI.jsp</result>
 			<result name="registerUI">/WEB-INF/jsp/front/registerUI.jsp</result>
 			<result name="loginToIndex" type="redirectAction">
