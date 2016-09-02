@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <footer class="blinkit-footer">
     <div class="blinkit-main" >
         <div class="blinkit-main-left">
@@ -19,7 +18,7 @@
                     <a href="http://www.blinkit.cn" class="footdon_pg" title="布灵格">
                         <i class="blinkit-main-center-a am-icon-home" > Blinkit</i>
                     </a>
-                    <a href="https://github.com/Only-lezi/Blinkit_Project_New/tree/master/Blinkit_Project_New" class="footdon_az animated" target="_blank" title="GitHub">
+                    <a href="https://github.com/Only-lezi/Blinkit_Project_New" class="footdon_az animated" target="_blank" title="GitHub">
                         <i class="blinkit-main-center-a am-icon-github " > GitHub</i>
                     </a>
                 </dd>
