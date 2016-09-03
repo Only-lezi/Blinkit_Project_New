@@ -37,11 +37,6 @@ public class IndexAction extends ActionSupport {
 		return "index";
 	}
 	
-	// 跳转到关于我们页面
-	public String about() {
-		return "about";
-	}
-	
 	// 跳转到留言板页面
 	public String comments() {
 		return "comments";
@@ -52,6 +47,16 @@ public class IndexAction extends ActionSupport {
 		return "markdownUI";
 	}
 	
+	// 跳转到关于我们页面
+	public String about() {
+		return "about";
+	}
+	
+	// 跳转到关于我们页面
+	public String MyResume() {
+		return "MyResume";
+	}
+		
 	// 跳转到登录页面
 	public String loginUI(){
 		return "loginUI";
