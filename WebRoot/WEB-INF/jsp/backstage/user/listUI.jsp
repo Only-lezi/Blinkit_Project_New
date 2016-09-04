@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!doctype html>
 <html class="no-js">
 <head>
@@ -21,9 +20,9 @@
   以获得更好的体验！</p>
 <![endif]-->
 	
-	<!-- 导航栏 -->
-	<%@ include file="/WEB-INF/jsp/common/backstage/admin_header.jsp" %>
-	
+<!-- 导航栏 -->
+<%@ include file="/WEB-INF/jsp/common/backstage/admin_header.jsp" %>
+
 
 <div class="am-cf admin-main">
   <!-- 左边侧边栏 -->
@@ -105,7 +104,6 @@
 	                <%-- <td><s:property value="birthday"/></td> --%>
 	                <td><s:property value="state?'有效':'无效'"/></td>
 	                <%-- <td><s:property value="userDesc"/></td> --%>
-	                
 	                <td>
 	                  <div class="am-btn-toolbar">
 	                    <div class="am-btn-group am-btn-group-xs">
@@ -141,8 +139,8 @@
       </div>
     </div>
 
-<!-- 底部版权信息 -->
-<%@ include file="/WEB-INF/jsp/common/backstage/admin_footer.jsp" %>
+	<!-- 底部版权信息 -->
+	<%@ include file="/WEB-INF/jsp/common/backstage/admin_footer.jsp" %>
 
   </div>
   <!-- content end -->
@@ -150,7 +148,6 @@
 
 <a href="#" class="am-icon-btn am-icon-th-list am-show-sm-only admin-menu" data-am-offcanvas="{target: '#admin-offcanvas'}"></a>
 </body>
-
 	<script type="text/javascript">
 		// 全选、反全选
 		function doSelectAll() {
@@ -179,19 +176,5 @@
 			document.forms[0].action = "${basePath }admin/user/user_deleteSelected().action";
 			document.forms[0].submit();
 		}
-	
 	</script>
-
-<!--[if lt IE 9]>
-<script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
-<script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
-<script src="assets/js/amazeui.ie8polyfill.min.js"></script>
-<![endif]-->
-
-<!--[if (gte IE 9)|!(IE)]><!-->
-<script src="${basePath }assets/js/jquery.min.js"></script>
-<!--<![endif]-->
-<script src="${basePath }assets/js/amazeui.min.js"></script>
-<script src="${basePath }assets/js/app.js"></script>
-
 </html>
