@@ -1,7 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="s" uri="/struts-tags"%>
 
 <!-- 站内搜索 -->
 <div class="side-box">
@@ -9,7 +7,7 @@
 		<span class="am-icon-search"> 站内搜索</span>
 	</div>
 	<div>
-		<form class="" action="${base}/index/search/" method="get">
+		<form class="" action="#" method="get">
 			<div class="am-input-group am-input-group-secondary">
 		      <input type="text" name="keyword" value="${keyword}" class="am-form-field" placeholder="搜索..." required>
 		      <span class="am-input-group-btn">
@@ -101,9 +99,9 @@
 	</div>
 	<div id="right-side-friendLink">
 		<ul>
-			<c:forEach items="${basePath }admin/link/showList.action" var="ls"><!-- ${systemListLink } -->
-				<li><a href="${ls.url }" target="_blank">${ls.title}</a></li>
-			</c:forEach>
+			<s:iterator value="friendlyLinkList">
+				<li><a href="<s:property value='linkURL'/>" target="_blank" title="<s:property value='linkTitle'/>"><s:property value='linkName'/></a></li>
+			</s:iterator>
 		</ul>
 	</div>
 </div>
