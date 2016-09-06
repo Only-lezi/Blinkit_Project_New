@@ -7,6 +7,7 @@
 	<package name="friendlyLink-action" namespace="/admin/link" extends="base-default">
 		<action name="*" class="cn.blinkit.core.backstage.friendlyLink.action.friendlyLinkAction" method="{1}">
 			<result name="{1}">/WEB-INF/jsp/backstage/friendlyLink/{1}.jsp</result>
+			<result name="showList">/WEB-INF/jsp/common/front/right_side.jsp</result>
 			<result name="list" type="redirectAction">
 				<param name="actionName">listUI</param>
 				<param name="encode">true</param>
