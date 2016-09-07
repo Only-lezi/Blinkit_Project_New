@@ -72,28 +72,6 @@ public class AdminAction extends ActionSupport {
 		}
 		return "list";
 	}
-	
-	
-	
-	/*//退出，注销
-	public String logout(){
-		//清除session中保存的用户信息
-		ServletActionContext.getRequest().getSession().removeAttribute(Constant.USER);
-		return toLoginUI();
-	}
-	//跳转到没有权限提示页面
-	public String toNoPermissionUI(){
-		return "noPermissionUI";
-	}
-	
-
-	public String getLoginResult() {
-		return loginResult;
-	}
-
-	public void setLoginResult(String loginResult) {
-		this.loginResult = loginResult;
-	}*/
 
 	public Admin getAdmin() {
 		return admin;
