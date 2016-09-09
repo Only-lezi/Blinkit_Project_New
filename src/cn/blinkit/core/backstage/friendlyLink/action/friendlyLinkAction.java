@@ -16,9 +16,9 @@ public class friendlyLinkAction extends BaseAction {
 	private FriendlyLink friendlyLink;
 	private String[] selectedRow;
 	
-	public List<FriendlyLink> showList() {
+	public String showList() {
 		friendlyLinkList = friendlyLinkService.findObjects();
-		return friendlyLinkList;
+		return "showList";
 	}
 
 	//列表页面
@@ -88,6 +88,4 @@ public class friendlyLinkAction extends BaseAction {
 	public void setFriendlyLink(FriendlyLink friendlyLink) {
 		this.friendlyLink = friendlyLink;
 	}
-
-	
 }
